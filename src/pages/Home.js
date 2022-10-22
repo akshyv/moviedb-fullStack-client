@@ -16,7 +16,7 @@ function Home() {
       history("/login");
     } else {
       axios
-        .get("http://localhost:3001/posts", {
+        .get("https://moviedb-fullstack-api-akshy.herokuapp.com/posts", {
           headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then((response) => {
@@ -33,7 +33,7 @@ function Home() {
   const likeAPost = (PostId) => {
     axios
       .post(
-        "http://localhost:3001/likes",
+        "https://moviedb-fullstack-api-akshy.herokuapp.com/likes",
         { PostId: PostId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )
