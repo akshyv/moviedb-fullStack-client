@@ -30,9 +30,11 @@ function CreatePost() {
   });
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3001/posts", data).then((response) => {
-      console.log("IT WORKED");
-    });
+    axios
+      .post("https://moviedb-fullstack-api-akshy.herokuapp.com/posts", data)
+      .then((response) => {
+        console.log("IT WORKED");
+      });
   };
   return (
     <div className="createPostPage">
